@@ -1,0 +1,287 @@
+<html>
+    <head>
+       <style>
+        .bday {
+          cursor: pointer;
+        }
+
+        .Option{
+            width: 80;
+            height: 40;
+            background-color: blanchedalmond;
+            border-width: 3px;
+            border-color: rgb(255, 225, 192);
+            cursor: pointer;
+            transition-duration: 0.4s;
+            font-family: 'Work Sans', sans-serif;
+                }
+        .Option:hover{
+          background-color: #ffffff;
+        }
+          
+        body {
+    font-size: 30px;
+	font-family: 'Work Sans', sans-serif;
+	color: #333;
+  font-weight: 300;
+  text-align: center;
+  background-color: #fffcf4;
+}
+      .tar {
+        width: 300;
+        height: 100
+      }
+
+      footer {
+  text-align: center;
+  padding: 4px;
+  background-color: rgb(176, 145, 107);
+  color: white;
+  font-size:small;
+}
+
+#Btn {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  font-size: 15px;
+  background-color: rgb(240, 189, 127);
+  color: rgb(0, 0, 0);
+  cursor: crosshair;
+  padding: 10px;
+}
+        </style>
+    </head>
+    <body>
+      <button onclick="button()" id="Btn" title="Go to top">Back</button>
+        <center>
+            <form>
+                <fieldset>
+                    <legend>Personal Information:</legend>
+
+Full name: <input type="text" id="fn" name="fn"> <br>
+
+Grade and Section: <input type="text" id="gs" name="gs"> <br>
+
+<label for="birthday">Birthday:</label>
+
+<input type="date" id="birthday" name="birthday" class="bday"> <br>
+
+Favorite Color: <input type="color" id="clr" name="clr" class="bday"> <br>
+
+</fieldset>
+
+<h3> Rate all the subjects (Grade 8) based on personal preference.</h3> <br>
+<label for="HG">1. Homeroom Guidance (Teacher: Ma'am Lilybeth Palon)</label> <br>
+
+<select id="HG" class="Option" name="HG">
+  <option value="Bad">Bad</option>
+  <option value="Decent">Decent</option>
+  <option value="Good">Good</option>
+  <option value="Great">Great</option>
+</select> <br> <br>
+<label for="ENG">2. English (Teacher: Ma'am Lilybeth Palon)</label> <br>
+
+<select id="ENG" class="Option" name="ENG">
+  <option value="Bad">Bad</option>
+  <option value="Decent">Decent</option>
+  <option value="Good">Good</option>
+  <option value="Great">Great</option>
+</select> <br> <br>
+
+<label for="Fil">3. Filipino (Teacher: Ma'am Edna Padiernos)</label> <br>
+
+<select id="Fil" class="Option" name="Fil">
+  <option value="Bad">Bad</option>
+  <option value="Decent">Decent</option>
+  <option value="Good">Good</option>
+  <option value="Great">Great</option>
+</select>
+<br> <br>
+
+<label for="ICT">4. I.C.T (Teacher: Sir Jeric Calleja)</label> <br>
+
+<select id="ICT" class="Option" name="ICT">
+  <option value="Bad">Bad</option>
+  <option value="Decent">Decent</option>
+  <option value="Good">Good</option>
+  <option value="Great">Great</option>
+</select>
+<br> <br>
+  <label for="ESP">5. E.S.P (Teacher: Ma'am Maribel Arcega)</label> <br>
+
+<select id="ESP" class="Option" name="ESP">
+  <option value="Bad">Bad</option>
+  <option value="Decent">Decent</option>
+  <option value="Good">Good</option>
+  <option value="Great">Great</option>
+</select>
+<br> <br>
+
+<label for="Sci">6. Science (Teacher: Ma'am Sandie Palafox)</label> <br>
+
+<select id="Sci" class="Option" name="Sci">
+  <option value="Bad">Bad</option>
+  <option value="Decent">Decent</option>
+  <option value="Good">Good</option>
+  <option value="Great">Great</option>
+</select>
+<br> <br>
+
+<label for="Math">7. Mathematics (Teacher: Ma'am Kashieca Viray)</label> <br>
+
+<select id="Math" class="Option" name="Math">
+  <option value="Bad">Bad</option>
+  <option value="Decent">Decent</option>
+  <option value="Good">Good</option>
+  <option value="Great">Great</option>
+</select>
+<br> <br>
+
+<label for="BIOTECH">8. Biotech (Teacher: Ma'am Chley Santos)</label> <br>
+
+<select id="BIOTECH" class="Option" name="BIOTECH">
+  <option value="Bad">Bad</option>
+  <option value="Decent">Decent</option>
+  <option value="Good">Good</option>
+  <option value="Great">Great</option>
+</select>
+<br> <br>
+
+<label for="MAPEH">9. MAPEH (Teacher: Sir Jeffson Ilagan)</label> <br>
+
+<select id="MAPEH" class="Option" name="MAPEH">
+  <option value="Bad">Bad</option>
+  <option value="Decent">Decent</option>
+  <option value="Good">Good</option>
+  <option value="Great">Great</option>
+</select>
+<br> <br>
+
+<label for="JOURN">10. Journalism (Teacher: Ma'am Anna Cuevas)</label> <br>
+
+<select id="JOURN" class="Option" name="JOURN">
+  <option value="Bad">Bad</option>
+  <option value="Decent">Decent</option>
+  <option value="Good">Good</option>
+  <option value="Great">Great</option>
+</select>
+<br> <br>
+
+<label for="AP">11. A.P (Teacher: Ma'am Maricris Valino)</label> <br>
+
+<select id="AP" class="Option" name="AP">
+  <option value="Bad">Bad</option>
+  <option value="Decent">Decent</option>
+  <option value="Good">Good</option>
+  <option value="Great">Great</option>
+  </select>
+  <br> <br>
+
+Comments? <br>
+<input type="textarea" class="tar" id="tarea" name="tarea">
+<br> <br>
+<input type="submit" value="Submit" onclick="info()" class="bday"> <br>
+</form>
+
+<footer>
+<p> Created by: <br>
+  Joel Dre B. Santos and Harvey Daniel V. Sta. Maria <br>
+  (ALL RIGHTS BELONG TO JOEL DRE B. SANTOS AND HARVEY DANIEL V. STA. MARIA.
+  ALL GATHERED INFORMATION WILL NOT BE SOLD OR GIVEN AWAY WITHOUT THE CONSENT OF THE SURVEY TAKER)
+</p>
+
+</footer>
+        <script>
+          
+let mybutton = document.getElementById("Btn");
+
+
+window.onscroll = function() {scrollFunction()};
+
+function scrollFunction() {
+  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+    mybutton.style.display = "block";
+  } else {
+    mybutton.style.display = "none";
+  }
+}
+
+
+function button() {
+  document.body.scrollTop = 0;
+  document.documentElement.scrollTop = 0;
+}
+
+            function info()
+            {
+              //document.getElementById value
+var fn=document.getElementById("fn").value;
+
+var gs=document.getElementById("gs").value;
+
+var birthday=document.getElementById("birthday").value;
+
+var clr=document.getElementById("clr").value;
+
+var HG=document.getElementById("HG").value;
+
+var ENG=document.getElementById("ENG").value;
+
+var Fil=document.getElementById("Fil").value;
+
+var ICT=document.getElementById("ICT").value;
+
+var ESP=document.getElementById("ESP").value;
+
+var Sci=document.getElementById("Sci").value;
+
+var Math=document.getElementById("Math").value;
+
+var BIOTECH=document.getElementById("BIOTECH").value;
+
+var MAPEH=document.getElementById("MAPEH").value;
+
+var JOURN=document.getElementById("JOURN").value;
+
+var tarea=document.getElementById("tarea").value;
+
+var AP=document.getElementById("AP").value;
+
+//localStorage
+
+var fn=localStorage.setItem("fn", fn);
+
+var gs=localStorage.setItem("gs", gs);
+
+var birthday=localStorage.setItem("birthday", birthday);
+
+var clr=localStorage.setItem("clr", clr);
+
+var HG=localStorage.setItem("HG", HG);
+
+var ENG=localStorage.setItem("ENG", ENG);
+
+var Fil=localStorage.setItem("Fil", Fil);
+
+var ICT=localStorage.setItem("ICT", ICT);
+
+var ESP=localStorage.setItem("ESP", ESP);
+
+var Sci=localStorage.setItem("Sci", Sci);
+
+var Math=localStorage.setItem("Math", Math);
+
+var BIOTECH=localStorage.setItem("BIOTECH", BIOTECH);
+
+var MAPEH=localStorage.setItem("MAPEH", MAPEH);
+
+var JOURN=localStorage.setItem("JOURN", JOURN);
+
+var tarea=localStorage.setItem("tarea", tarea);
+
+var AP=localStorage.setItem("AP", AP);
+            }
+        </script>
+    </body>
+   </html>
